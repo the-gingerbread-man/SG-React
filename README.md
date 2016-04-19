@@ -3,6 +3,8 @@
 ### For this exercise you will be building a Connect-4 Game with React.js. 
 The boiler-plate code for running your node server and styling the page is provided-- your job is to create the appropriate React components and component methods so the game works.
 
-First, run `npm install` to get all of the dependancies you'll need. I wrote a build script to compile the jsx in the /client/src folder for you-- it runs automatically when you call `npm start`. Still, you might want to practice setting up a React build system-- if you want to do that, just delete the script and set your own stuff up. (Browserify and Babelify are already included. )
+First, run `npm install` to get all of the dependancies you'll need. I wrote a build script to compile the jsx in the /client/src folder for you-- it runs automatically when you call `npm start`. 
 
-All of your components should go in the /client/src/components folder.
+If you want to practice setting up a React/JSX build system, just delete the "build" script and set your own stuff up. (Browserify and Babelify are already included.) Eslint is included, too-- just type `npm run lint` to see the lints it returns. If you're not familiar with using eslint, talk to me. It's super helpful.
+
+All of your components should go in the /client/src/components folder. You might also want to mess with the styles/css to make your app pretty. Everything else is good to go.

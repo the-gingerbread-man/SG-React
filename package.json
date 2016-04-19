@@ -4,6 +4,7 @@
   "description": "Study guide for React.js on the recruitment assessment.",
   "main": "client/index.html",
   "scripts": {
+    "lint": "eslint client/src/*.jsx && eslint client/src/components/*.jsx",
     "prestart": "npm run build",
     "start": "node server/server.js",
     "build": "browserify -t [babelify] client/src/index.jsx -o client/build/bundle.js",
