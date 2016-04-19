@@ -5,7 +5,7 @@
   "main": "client/index.html",
   "scripts": {
     "prestart": "npm run build",
-    "start": "open client/index.html",
+    "start": "node server/server.js",
     "build": "browserify -t [babelify] client/src/index.jsx -o client/build/bundle.js",
     "test": "export NODE_ENV=test && mocha --timeout 3000 test"
   },
@@ -48,6 +48,7 @@
     }
   },
   "dependencies": {
+    "express": "^4.13.4",
     "react": "^15.0.1",
     "react-dom": "^15.0.1"
   },
