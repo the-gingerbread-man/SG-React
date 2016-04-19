@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import Board from './components/board.jsx';
 
 class App extends React.Component {
@@ -9,12 +9,12 @@ class App extends React.Component {
 	}
 
 	render() {
+		// Put your main React component inside the div
 		return (
 			<div className="react-container">
-			<Board />
 			</div>
 			);
 	}
 }
 
-render(<App />, document.getElementById('container'));
+// You should probably use the ReactDOM to render your app on the page here...
