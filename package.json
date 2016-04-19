@@ -2,8 +2,9 @@
   "name": "sg-react",
   "version": "1.0.0",
   "description": "Study guide for React.js on the recruitment assessment.",
-  "main": "client/index.jsx",
+  "main": "client/src/index.jsx",
   "scripts": {
+    "build": "browserify -t [babelify] client/src/index.jsx -o client/build/bundle.js",
     "test": "export NODE_ENV=test && mocha --timeout 3000 test"
   },
   "repository": {
@@ -15,5 +16,37 @@
   "bugs": {
     "url": "https://github.com/the-gingerbread-man/SG-React/issues"
   },
-  "homepage": "https://github.com/the-gingerbread-man/SG-React#readme"
+  "homepage": "https://github.com/the-gingerbread-man/SG-React#readme",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true,
+      "mocha": true
+    },
+    "plugins": [
+      "react"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "globals": {
+      "__dirname": true
+    }
+  },
+  "dependencies": {
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
+  }
 }
