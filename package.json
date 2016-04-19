@@ -1,0 +1,19 @@
+{
+  "name": "sg-react",
+  "version": "1.0.0",
+  "description": "Study guide for React.js on the recruitment assessment.",
+  "main": "client/index.jsx",
+  "scripts": {
+    "test": "export NODE_ENV=test && mocha --timeout 3000 test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-gingerbread-man/SG-React.git"
+  },
+  "author": "Alex Patch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/the-gingerbread-man/SG-React/issues"
+  },
+  "homepage": "https://github.com/the-gingerbread-man/SG-React#readme"
+}
