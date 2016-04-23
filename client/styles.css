@@ -1,14 +1,30 @@
+#gameBoard {
 
-
-table {
-	min-width: 450;
-	min-height: 350;
 }
 
-button {
+.row {
+	display: inline-block;
+}
+
+.dropButton {
+	display: inline-block;
 	background-color: firebrick;
+
 }
 
-td {
+.space {
+	display: inline;
 	background-color: blanchedalmond;
+}
+
+.E-space {
+	background-color: lightgoldenrodyellow;
+}
+
+.R-space {
+	background-color: red;
+}
+
+.B-space {
+	background-color: black;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './button.jsx';
 import Space from './space.jsx';
 
 class Board extends React.Component {
@@ -16,48 +17,47 @@ class Board extends React.Component {
 		};
 	}
 
-	drop(rowIndex) {
+	drop(columnIndex) {
 		let spaces = this.state.spaces;
 		let turn = this.state.turn;
 		
 		for (let i = 5; i >= 0; i--) {
-			if (spaces[i][rowIndex] === 'E') {
-				spaces[i] = turn;
-				if (turn = 'R') turn = 'B';
-				else turn = 'R';
+			if (spaces[i][columnIndex] === 'E') {
+				spaces[i][columnIndex] = turn;
+				turn === 'R' ? turn='B' : turn = 'R';
 				this.setState({ turn: turn, spaces: spaces });
+				console.log(spaces);
 				break;
 			}
 		}
+		console.log(this.state.spaces);
 	}
 
 	render() {
-		const buttons = new Array(7).map((_, index) => {
-			return (<td><Button drop={this.drop} row={index} /></td>);
-		});
-
-		console.log(buttons);
+		const buttons = [];
+		for (var i = 0; i < 7; i++) {
+			buttons.push(<Button value={i} className="dropButton" drop={this.drop.bind(this)} /> );
+		}
 
 		const rows = this.state.spaces.map((row, rowIndex) => {
-			const spaces = row.map((space, spaceIndex) => {
+			
+			const spaces = row.map((space, columnIndex) => {
 				return (
-					<Space key={`${rowIndex}${spaceIndex}`} color={space} />
+					<Space className="space" key={`${rowIndex}${columnIndex}`} color={space} />
 					);
 			});
 
 			return (
-				<tr key={rowIndex} className="board-row">
+				<div className="row" key={rowIndex} >
 					{ spaces }
-				</tr>
+				</div>
 				);
 		});
 		return (
-			<table className="board">
-				<tbody>
-					<tr> { buttons } </tr>
-					{ rows }
-				</tbody>
-			</table>
+			<div>
+				<div className="row"> {buttons} </div>
+				{rows}
+			</div>
 			);
 	}
 }
