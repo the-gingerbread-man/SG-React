@@ -9,11 +9,11 @@ class Board extends React.Component {
 		this.state = {
 			turn:'R',
 			spaces: [['E', 'E', 'E', 'E', 'E', 'E', 'E'],
-								['E', 'E', 'E', 'E', 'E', 'E', 'E'],
-								['E', 'E', 'E', 'E', 'E', 'E', 'E'],
-								['E', 'E', 'E', 'E', 'E', 'E', 'E'],
-								['E', 'E', 'E', 'E', 'E', 'E', 'E'],
-								['E', 'E', 'E', 'E', 'E', 'E', 'E']],
+							 ['E', 'E', 'E', 'E', 'E', 'E', 'E'],
+							 ['E', 'E', 'E', 'E', 'E', 'E', 'E'],
+							 ['E', 'E', 'E', 'E', 'E', 'E', 'E'],
+							 ['E', 'E', 'E', 'E', 'E', 'E', 'E'],
+							 ['E', 'E', 'E', 'E', 'E', 'E', 'E']],
 		};
 	}
 
@@ -55,8 +55,13 @@ class Board extends React.Component {
 		});
 		return (
 			<div>
-				<div className="row"> {buttons} </div>
+				<div className="row"> 
+					{buttons} 
+				</div>
+				
+				<div className="game_board">
 				{rows}
+				</div>
 			</div>
 			);
 	}

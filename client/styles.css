@@ -1,30 +1,33 @@
 #gameBoard {
+	min-width: 70%;
 
 }
 
 .row {
-	display: inline-block;
+	display: block;
 }
 
 .dropButton {
 	display: inline-block;
-	background-color: firebrick;
+	min-width: 70px;
+	color: firebrick;
 
-}
-
-.space {
-	display: inline;
-	background-color: blanchedalmond;
 }
 
 .E-space {
+	min-height: 70px;
+	min-width: 70px;
 	background-color: lightgoldenrodyellow;
 }
 
 .R-space {
+	min-height: 70px;
+	min-width: 70px;
 	background-color: red;
 }
 
 .B-space {
+	min-height: 70px;
+	min-width: 70px;
 	background-color: black;
 }

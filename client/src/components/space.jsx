@@ -8,7 +8,7 @@ class Space extends React.Component {
 	
 	render() {
 		return (
-						<div className={`${this.props.color}-space`}>O</div>
+						<span className={`${this.props.color}-space`}>O</span>
 					);
 	}
 }
